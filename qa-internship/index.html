@@ -14,6 +14,10 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        flex-direction: column;
+    }
+    h2 {
+        margin-bottom: 20px;
     }
     form {
         background: white;
@@ -81,18 +85,19 @@ function validateForm() {
     }
 
     const telephone = document.getElementById('telephone').value;
-    the telephoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
+    const telephoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
     if (!telephoneRegex.test(telephone)) {
         alert('Telephone number must follow the format (XXX) XXX-XXXX.');
         return false;
     }
 
     alert('Form submitted successfully!');
-    return true;
 }
 </script>
 </head>
 <body>
+<h2>QA Internship Test Case Task</h2>
+<h6>You can include design related test cases as well.</h6>
 <form id="validationForm">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required><br><br>
